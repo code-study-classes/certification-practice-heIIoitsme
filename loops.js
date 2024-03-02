@@ -108,3 +108,5 @@ let k = 1;
     return h;
 }
 console.log(findFibonacciIndex(55))
+
+export(sumOfSquares, power, factorialProduct, fibonacciSequence, sumOfPowers, remainingLength, findExponent, findMinAndMax, CalculateGCD, findFibonacciIndex)
