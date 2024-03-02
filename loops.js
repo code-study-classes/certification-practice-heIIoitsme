@@ -52,51 +52,59 @@ function sumOfPowers(n){
 console.log(sumOfPowers(3))
 
 // 6 ---------------------------------
-function sumOfSquares(a, b){
-  let sum = 0;
-  for (let i = a; i <= b; i++){
-    sum += i * i;
+function remainingLength(a, n){
+  while (a-n > 0){
+    a -= n;
   }
-  return sum;
+  return a;
 }
-console.log(sumOfSquares(2, 5))
+console.log(remainingLength(15, 4))
 
 // 7 ---------------------------------
-function sumOfSquares(a, b){
-  let sum = 0;
-  for (let i = a; i <= b; i++){
-    sum += i * i;
+function findExponent(n){
+  let k = 0;
+  while (n > 1){
+      n = n/2;
+      k++;
   }
-  return sum;
+  return k;
 }
-console.log(sumOfSquares(2, 5))
+console.log(findExponent(8))
 
 // 8 ---------------------------------
-function sumOfSquares(a, b){
+function findMinAndMax(a){
+  let k = 0;
   let sum = 0;
-  for (let i = a; i <= b; i++){
-    sum += i * i;
+  while (sum < a){
+      k++;
+      sum += k
   }
-  return sum;
+  return k;
 }
-console.log(sumOfSquares(2, 5))
+console.log(findMinAndMax(20))
 
 // 9 ---------------------------------
-function sumOfSquares(a, b){
-  let sum = 0;
-  for (let i = a; i <= b; i++){
-    sum += i * i;
-  }
-  return sum;
+function CalculateGCD(a, b) {
+    while (b !== 0) {
+        let h = b;
+        b = a % b;
+        a = h;
+    }
+    return a;
 }
-console.log(sumOfSquares(2, 5))
+console.log(CalculateGCD(27, 81))
 
 // 10 ---------------------------------
-function sumOfSquares(a, b){
-  let sum = 0;
-  for (let i = a; i <= b; i++){
-    sum += i * i;
-  }
-  return sum;
+function findFibonacciIndex(a){
+let h = 2
+let sum = 1;
+let k = 1;
+    while (a > k) {
+      h += 1
+      let l = sum+k;
+      sum = k
+      k = l
+    }
+    return h;
 }
-console.log(sumOfSquares(2, 5))
+console.log(findFibonacciIndex(55))
